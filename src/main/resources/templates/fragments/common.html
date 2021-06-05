@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="headerfiles">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.6.0-1/css/bootstrap.css}"/>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+  <script th:src="@{/webjars/jquery/3.6.0/jquery.js}" ></script>
+</head>
+<body>
+<footer th:fragment="footer" class="my-5 text-muted text-center text-small">
+  <ul class="list-inline">
+    <li><span th:text="${#httpServletRequest.getHeader('User-Agent')}">Agent</span></li>
+  </ul>
+</footer>
+</body>
+</html>
